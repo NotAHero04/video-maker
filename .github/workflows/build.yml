@@ -6,12 +6,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps: 
       - name: Set up the environment (step 1)
-        uses: actions/checkout@v2
-        with:
-          repository: 'NotAHero04/RedditVideoMakerBot'
-          branch: 'develop'
-          path: 'videomaker'
-      - name: Set up the environment (step 2, not finished)
+        run: git clone https://github.com/NotAHero04/RedditVideoMakerBot videomaker --branch develop
+      - name: Set up the environment (step 2)
         run: |
           cd videomaker
           pip3 install -r requirements.txt
@@ -24,7 +20,7 @@ jobs:
       - name: Prepare to upload files
         run: |
           cd videomaker/results/AskReddit
-          zip -9 -r result.zip *.MP4
+          zip -9 -r result.zip *.mp4
       - name: Upload files
         uses: actions/upload-artifact@v2
         with:
