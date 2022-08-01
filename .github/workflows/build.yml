@@ -16,6 +16,7 @@ jobs:
       - name: Run the maker
         run: |
           cd videomaker
+          pip3 install pyttsx3
           python3 main.py
       - name: Prepare to upload files
         run: |
