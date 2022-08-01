@@ -1,0 +1,31 @@
+name: Scheduled run
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: "* */1 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps: 
+      - name: Set up the environment (step 1)
+        run: git clone https://github.com/NotAHero04/RedditVideoMakerBot videomaker --branch develop
+      - name: Set up the environment (step 2)
+        run: |
+          cd videomaker
+          pip3 install -r requirements.txt
+          python3 -m playwright install
+          python3 -m playwright install-deps
+      - name: Run the maker
+        run: |
+          cd videomaker
+          pip3 install pyttsx3
+          python3 main.py
+      - name: Prepare to upload files
+        run: |
+          cd videomaker/results/AskReddit
+          zip -9 -r result.zip *.mp4
+      - name: Upload files
+        uses: actions/upload-artifact@v2
+        with:
+          name: result
+          path: videomaker/results/AskReddit/result.zip
