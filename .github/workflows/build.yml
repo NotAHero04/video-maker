@@ -8,7 +8,7 @@ jobs:
       - name: Set up the environment (step 1)
         uses: actions/checkout@v2
         with:
-          repository: 'elebumm/RedditVideoMakerBot'
+          repository: 'NotAHero04/RedditVideoMakerBot'
           branch: 'develop'
           path: 'videomaker'
       - name: Set up the environment (step 2, not finished)
@@ -17,8 +17,6 @@ jobs:
           pip3 install -r requirements.txt
           python3 -m playwright install
           python3 -m playwright install-deps
-          ls -lR
-          cp ~/config.toml .
       - name: Run the maker
         run: python3 main.py
       - name: Prepare to upload files
