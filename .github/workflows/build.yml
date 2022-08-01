@@ -1,4 +1,4 @@
-name: Test run - final
+name: Test run
 on: 
   workflow_dispatch:
 jobs:
