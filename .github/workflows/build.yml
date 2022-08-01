@@ -1,4 +1,5 @@
 name: Test run
+on: 
 jobs:
   build:
     runs-on: ubuntu-22.04
