@@ -1,4 +1,4 @@
-name: Test run
+name: Test run - final
 on: 
   workflow_dispatch:
 jobs:
@@ -26,6 +26,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: result
-          path: videomaker/results/result.zip
+          path: videomaker/results/AskReddit/result.zip
 
         
