@@ -17,17 +17,18 @@ jobs:
           pip3 install -r requirements.txt
           python3 -m playwright install
           python3 -m playwright install-deps
-          ls -lR ~
       - name: Run the maker
-        run: python3 main.py
+        run: |
+          cd videomaker
+          python3 main.py
       - name: Prepare to upload files
         run: |
-          cd results/AskReddit
+          cd videomaker/results/AskReddit
           zip -9 -r result.zip *.MP4
       - name: Upload files
         uses: actions/upload-artifact@v2
         with:
           name: result
-          path: result.zip
+          path: videomaker/results/result.zip
 
         
