@@ -14,11 +14,10 @@ jobs:
       - name: Set up the environment (step 2, not finished)
         run: |
           cd videomaker
-          sudo apt install libxkbcommon0 libgbm1 libwayland-client0 -y
           pip3 install -r requirements.txt
           python3 -m playwright install
           python3 -m playwright install-deps
-          cp ../config.toml .
+          cp ~/config.toml .
       - name: Run the maker
         run: python3 main.py
       - name: Prepare to upload files
