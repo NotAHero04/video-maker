@@ -5,6 +5,6 @@ Automatically creates videos. Run the workflow to try out!
 
 Before spamming at the "Run workflow" button, you should know two things:
 
-- It's easy, right? Pay some respect for your favorite YouTubers who spend days making a good video.
+- It's easy, right? Pay some respect for your favorite YouTubers who spend days making good videos.
 
 - NEVER ABUSE THIS. BEWARE OF THE DIMINISHING RETURNS! You can't expect any person to "ask Reddit" 69 times a day.
