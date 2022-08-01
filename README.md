@@ -1,2 +1,2 @@
 # video-maker
-Automatically creates videos
+Automatically creates videos. Run the workflow to try out!
