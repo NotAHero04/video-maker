@@ -15,6 +15,7 @@ jobs:
           python3 -m playwright install
           python3 -m playwright install-deps
       - name: Run the maker
+        continue-on-error: true
         run: |
           cd videomaker
           pip3 install pyttsx3
