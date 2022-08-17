@@ -13,11 +13,12 @@ jobs:
           pip3 install -r requirements.txt
           python3 -m playwright install
           python3 -m playwright install-deps
+          sudo apt install run-one
       - name: Run the maker
         run: |
           cd videomaker
           pip3 install pyttsx3
-          while "python3 main.py"; do :; done
+          run-one-until-failure python3 main.py
       - name: Prepare to upload files
         run: |
           cd videomaker/results/AskReddit
