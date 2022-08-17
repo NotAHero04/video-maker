@@ -17,7 +17,7 @@ jobs:
         run: |
           cd videomaker
           pip3 install pyttsx3
-          python3 main.py
+          while "python3 main.py"; do :; done
       - name: Prepare to upload files
         run: |
           cd videomaker/results/AskReddit
