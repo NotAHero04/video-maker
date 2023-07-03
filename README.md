@@ -1,3 +1,7 @@
+# Important announcement!
+
+After June 30th, Reddit's API policy has changed. However, this repository will still work, because it doesn't touch any API call. That doesn't mean it will be future-proof, though.
+
 # video-maker
 Automatically creates videos. Run the workflow to try out!
 
